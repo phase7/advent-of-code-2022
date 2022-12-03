@@ -15,3 +15,12 @@ for item in given_cases:
     sum += char_values[common_letter.pop()]
 
 assert sum == 8105
+
+# puzzle 2
+sum = 0
+for i in range(0, 299, 3):  #  start, stop, step
+    first, second, third = map(set, given_cases[i : i + 3])
+    common_character = first & second & third
+    sum += char_values[common_character.pop()]
+
+assert sum == 2363
